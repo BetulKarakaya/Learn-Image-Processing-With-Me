@@ -35,7 +35,7 @@ import cv2 as cv
 
 if __name __ == "__main__":
     
-    #Read images
+   #Read images
     img = cv.imread("saltandpeppernoise.jpg")
 
 
@@ -52,6 +52,13 @@ if __name __ == "__main__":
  ```
 🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
+----
+#### Avarege Mean Blur
+
+``` python
+cv.blur(image,(K,N)) # Kand N is neighbor distances
+```
+![avarege_mean_blur (1)](https://user-images.githubusercontent.com/106507209/223855728-01c4c464-625a-424e-bb79-d59e6d6c19f6.png)
 
 
  
