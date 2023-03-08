@@ -25,6 +25,35 @@ Image are not visual element for computer, but matrix of pixels. So computer han
 This line of code create an empty screen. Images are multi-dimensional array.  So can create a screen with numpy array without use a image.
 
 
+## BLURRING FILTER
+
+#### 🔥🔥WARNING🔥🔥
+##### General template. Usually we will write our codes in the appropriate part of this template.
+``` python
+
+import cv2 as cv
+
+if __name __ == "__main__":
+    
+    #Read images
+    img = cv.imread("saltandpeppernoise.jpg")
+
+
+    #The part where the image is processed
+    
+    
+    #Show processed image
+    cv.imshow(img)
+   
+   
+    #Waiting a key press to close all the windows and release used sources
+    cv.waitKey(0)
+    cv.destroyAllWindows()
+ ```
+🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+
+
  
 To be continued, stay tuned :)
 
