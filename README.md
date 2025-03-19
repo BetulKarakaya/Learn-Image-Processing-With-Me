@@ -1,69 +1,61 @@
-# Learn-Opencv-With-programmewithkarsan
+# Image Processing with Pillow
 
-# SUMMARY
-This is a tutorial-like place that aim to  be simple but understandable. For me, most of the OpenCV source was complicated at first, so i want to make a simple source explain OpenCV and teach basic but important stuff.  Thank you to  check this out ☺
+This project demonstrates basic image processing techniques using the Python **Pillow** library. It includes various operations such as resizing, cropping, rotating, flipping, applying filters, converting to grayscale, adding text, and accessing pixel data. The project is designed to explore and apply basic image manipulation tasks that can be expanded further as new features are added.
 
+## Features
 
-## WHAT IS AN IMAGE IN IMAGE PROCESSING
-Image are not visual element for computer, but matrix of pixels. So computer handle a image as mathematical element.
+- **Resize Image**: Change the dimensions of an image.
+- **Crop Image**: Crop a specific region from the image.
+- **Rotate Image**: Rotate the image by a given angle.
+- **Flip Image**: Flip the image either horizontally or vertically.
+- **Apply Filter**: Apply different image filters like blur, contour, and sharpen.
+- **Convert to Grayscale**: Convert the image to grayscale.
+- **Add Text**: Add customizable text onto the image.
+- **Access Pixels**: Retrieve pixel values at specific coordinates.
 
-![what_is_a_image](https://user-images.githubusercontent.com/106507209/223547355-bd3e9998-b02d-4e68-ba96-dc3fb92dbb17.gif)  <a href="https://www.flaticon.com/free-icons/arrow" title="arrow icons">Arrow icons created by Stockio - Flaticon</a>
+## Setup
 
+1. **Install Pillow**: You need to install the Pillow library to work with image files.
 
-## WHAT IS COLOR FORMAT OF OPENCV
+2. **Image Files**: Ensure that you have an image (e.g., [sample.jpg](https://www.pexels.com/tr-tr/fotograf/dinamik-isik-efektleriyle-soyut-portre-31208192/) ) for testing. You can use any image or download one from free image sources like Pexels or Unsplash.
 
-![RGBvsBGR](https://user-images.githubusercontent.com/106507209/223425985-6bcc4797-80f0-4da6-943d-d797d3ab8107.gif)
+3. **Directory Structure**: The program creates an `edited_images` folder to save all processed images. Ensure the script has permission to create files and folders.
 
+## Usage
 
-## LINES AND SHAPES
-##### CREATE AN EMPTY SCREEN
+1. Clone or download the repository.
+2. Place your image file (e.g., [sample.jpg](https://www.pexels.com/tr-tr/fotograf/dinamik-isik-efektleriyle-soyut-portre-31208192/) ) in the project directory.
+3. Run the script.
 
-``` python
- screen_base = np.zeros((screen_width,screen_height,3), dtype = "uint8") # 3,channel count(B G R) 
- 
+```bash
+python pillow_basics_github.py
 ```
-This line of code create an empty screen. Images are multi-dimensional array.  So can create a screen with numpy array without use a image.
 
+The script will:
 
-## BLURRING FILTER
+- Show the original image.
+- Perform various transformations on the image and save the results as new files in the edited_images folder.
 
-#### 🔥🔥WARNING🔥🔥
-##### General template. Usually we will write our codes in the appropriate part of this template.
-``` python
+## Example Outputs
+- Resized image (resized.jpg)
+- Cropped image (cropped.jpg)
+- Rotated image (rotated.jpg)
+- Flipped image (flipped.jpg)
+- Filtered image (sharpened.jpg, blur.jpg)
+- Grayscale image (grayscale.jpg)
+- Image with added text (text_added.jpg)
 
-import cv2 as cv
+## Future Work
+This project will be expanded to include more advanced image processing techniques, such as:
 
-if __name __ == "__main__":
-    
-   #Read images
-    img = cv.imread("saltandpeppernoise.jpg")
+- Image enhancement (brightness, contrast adjustment)
+- Object detection
+- Edge detection
+- Image transformation (perspective correction, skewing)
+- Batch processing of multiple images
 
+## Contributing
+Feel free to contribute to the project by opening issues or submitting pull requests with new features or improvements. Any contributions are welcome!
 
-    #The part where the image is processed
-    
-    
-    #Show processed image
-    cv.imshow(img)
-   
-   
-    #Waiting a key press to close all the windows and release used sources
-    cv.waitKey(0)
-    cv.destroyAllWindows()
- ```
-🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-----
-#### Avarege Mean Blur
-
-``` python
-cv.blur(image,(K,N)) # Kand N is neighbor distances
-```
-![avarege_mean_blur (1)](https://user-images.githubusercontent.com/106507209/223855728-01c4c464-625a-424e-bb79-d59e6d6c19f6.png)
-
-
- 
-To be continued, stay tuned :)
-
-----
-
-Thank you to be part of this learning journey with me 😺
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
