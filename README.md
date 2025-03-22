@@ -12,6 +12,10 @@ This project demonstrates basic and advanced image processing techniques using t
 - **Add Text**: Add customizable text onto the image.
 - **Access Pixels**: Retrieve pixel values at specific coordinates.
 - **Enhance Image**: Adjust brightness, contrast, sharpness, and color balance.
+- **Image Rolling**: 
+- **Draw Shapes**: Create a blank image with a background color and draw basic shapes such as lines, rectangles, circles, and polygons.
+- **Rolling Image**: Resize an image and create a repeated pattern to fill a new canvas.
+
 
 ## Setup
 
@@ -23,10 +27,12 @@ This project demonstrates basic and advanced image processing techniques using t
 
 ## Usage
 
+
 1. Clone or download the repository.
 2. Place your image file (e.g., [sample.jpg](https://www.pexels.com/tr-tr/fotograf/dinamik-isik-efektleriyle-soyut-portre-31208192/) ) in the project directory.
-3. Run the script.
-
+3. Run the scripts.
+   
+### **Basic Image Processing**
 ```bash
 python pillow_basics_github.py
 ```
@@ -36,6 +42,8 @@ The script will:
 - Show the original image.
 - Perform various transformations on the image and save the results as new files in the **edited_images** folder.
 
+### **Image Enhancement**
+To manipulate brightness, contrast, color levels, and sharpness, run:
 ```bash
 python pillow_enhanced_images_github.py
 ```
@@ -44,6 +52,30 @@ The script will:
 
 - Show the original image.
 - It manipulates the brightness, contrast, color levels, and sharpness of an image and save the results as new files in the **enhanced_images** folder.
+
+### **Drawing Shapes on an Image**
+To create an image with a background color and draw shapes (lines, rectangles, circles, polygons), run:
+
+```bash
+python pillow_drawings_github.py
+```
+This script will:
+
+- Create a blank image with a specified background color.
+- Draw various shapes on the image.
+- Save the image in the **edited_images** folder.
+
+### **Rolling Image**
+To create an image where a resized version of the original is repeated across the canvas, run:
+
+```bash
+python pillow_image_rolling_github.py
+```
+This script will:
+
+- Resize the image to a specified smaller size.
+- Repeatedly paste this resized image to fill the entire original canvas.
+- Save the output in the **rolled_image** folder.
 
 
 ## Example Outputs
@@ -58,6 +90,7 @@ The script will:
 - Contrast-adjusted image (contrast_3.jpg)
 - Sharpness-enhanced image (sharped_3.jpg)
 - Color-enhanced image (color_level_3.jpg)
+- Image with drawn shapes (drawing.jpg)
 
 ## Future Work
 This project will be expanded to include more advanced image processing techniques, such as:
