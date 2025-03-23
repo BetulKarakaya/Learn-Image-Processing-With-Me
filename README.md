@@ -15,6 +15,7 @@ This project demonstrates basic and advanced image processing techniques using t
 - **Image Rolling**: 
 - **Draw Shapes**: Create a blank image with a background color and draw basic shapes such as lines, rectangles, circles, and polygons.
 - **Rolling Image**: Resize an image and create a repeated pattern to fill a new canvas.
+- **Fix Low Image Resolution**: Enhances the resolution and quality of low-resolution images using the Pillow library.
 
 
 ## Setup
@@ -76,6 +77,20 @@ This script will:
 - Resize the image to a specified smaller size.
 - Repeatedly paste this resized image to fill the entire original canvas.
 - Save the output in the **rolled_image** folder.
+
+### **High-Resolution Image Enhancement**
+This script enhances the resolution and quality of low-resolution images using the Pillow library. It applies sharpening, contrast enhancement, and color adjustment to improve image clarity. The enhanced images can be saved with high quality or increased DPI (dots per inch) for better print resolution.
+
+```bash
+python pillow_fix_resolution_github.py
+```
+This script will:
+
+- Enhance image sharpness, contrast, and color vibrancy
+- Save the image with maximum quality settings
+- Save the image with high DPI (300 DPI) for printing purposes
+- Save the output in the **higger_resolution** folder.
+
 
 
 ## Example Outputs
