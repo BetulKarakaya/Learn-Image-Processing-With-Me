@@ -13,7 +13,7 @@ class PillowText:
         txt_layer = Image.new("RGBA", image.size, (255, 255, 255, 0))
 
         drawing = ImageDraw.Draw(txt_layer)
-        font = ImageFont.truetype("Pillow/Tests/fonts/FreeMono.ttf", 80)
+        font = ImageFont.truetype("arial.ttf", 150)
         drawing.text(position, text, fill=(0, 0, 0, opacity), font= font)
         combined = Image.alpha_composite(image, txt_layer)
 
