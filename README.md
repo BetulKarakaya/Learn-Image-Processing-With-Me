@@ -91,7 +91,19 @@ This script will:
 - Save the image with high DPI (300 DPI) for printing purposes
 - Save the output in the **higger_resolution** folder.
 
+###  **Color Change Tool**
+This script allows you to **replace specific colors in an image** based on an RGB range. It uses **Pillow** and **NumPy** to detect pixels within a given color range and replace them with a new color. 
 
+```bash
+python pillow_color_change_github.py
+```
+
+This script will:
+
+- Load the Image – Opens the input image and converts it to **RGBA** format.
+- Define the Color Range – Specify the **RGB min-max values** to detect specific colors.
+- Apply the Color Change – Replaces pixels in the defined range with a **new RGBA color**.
+- Save the Processed Image – Stores the modified image in the `color_changed_image` folder.
 
 ## Example Outputs
 - Resized image (resized.jpg)
