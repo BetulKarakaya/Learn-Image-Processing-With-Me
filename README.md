@@ -16,6 +16,7 @@ This project demonstrates basic and advanced image processing techniques using t
 - **Draw Shapes**: Create a blank image with a background color and draw basic shapes such as lines, rectangles, circles, and polygons.
 - **Rolling Image**: Resize an image and create a repeated pattern to fill a new canvas.
 - **Fix Low Image Resolution**: Enhances the resolution and quality of low-resolution images using the Pillow library.
+- **Batch Image Processing**: Process multiple images at once with resizing, cropping, rotating, and contrast enhancement.
 
 
 ## Setup
@@ -105,6 +106,25 @@ This script will:
 - Apply the Color Change – Replaces pixels in the defined range with a **new RGBA color**.
 - Save the Processed Image – Stores the modified image in the `color_changed_image` folder.
 
+### **Batch Image Processing**
+To apply transformations (resize, rotate, crop, adjust contrast) to multiple images in a folder, run:
+
+```bash
+python pillow_batch_image_github.py
+```
+The script will:
+
+- Load all images from the input_images folder.
+- Resize images to 500x500 pixels.
+- Rotate images by 30 degrees.
+- Crop images to a specific region (50,50 to 450,450).
+- Enhance contrast by a factor of 1.5.
+- Save processed images in the output_images folder.
+#### Resources of input_images folder:
+- [Pexels Image of Jean-Daniel Francoeur](https://www.pexels.com/tr-tr/fotograf/30936133/)
+- [Pexels Image of lauriphoto](https://www.pexels.com/tr-tr/fotograf/31263848/)
+- [Pexels Image of berobscura](https://www.pexels.com/tr-tr/fotograf/30650040/)
+
 ## Example Outputs
 - Resized image (resized.jpg)
 - Cropped image (cropped.jpg)
@@ -118,6 +138,7 @@ This script will:
 - Sharpness-enhanced image (sharped_3.jpg)
 - Color-enhanced image (color_level_3.jpg)
 - Image with drawn shapes (drawing.jpg)
+- Batch processed images (saved in output_images/edited_*.jpg)
 
 ## Future Work
 This project will be expanded to include more advanced image processing techniques, such as:
