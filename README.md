@@ -59,11 +59,17 @@ The script will:
 To create an image with a background color and draw shapes (lines, rectangles, circles, polygons), run:
 
 ```bash
+python open_cv_shapes_text_github.py
+```
+or
+
+```bash
 python pillow_drawings_github.py
 ```
+
 This script will:
 
-- Create a blank image with a specified background color.
+- Create a blank image with a specified background color. (pillow) or draws on the given file (open_cv)
 - Draw various shapes on the image.
 - Save the image in the **edited_images** folder.
 
@@ -146,7 +152,6 @@ This project will be expanded to include more advanced image processing techniqu
 - Object detection
 - Edge detection
 - Image transformation (perspective correction, skewing)
-- Batch processing of multiple images
 
 ## Contributing
 Feel free to contribute to the project by opening issues or submitting pull requests with new features or improvements. Any contributions are welcome!
