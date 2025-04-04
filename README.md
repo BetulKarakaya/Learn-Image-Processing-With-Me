@@ -131,6 +131,30 @@ The script will:
 - [Pexels Image of lauriphoto](https://www.pexels.com/tr-tr/fotograf/31263848/)
 - [Pexels Image of berobscura](https://www.pexels.com/tr-tr/fotograf/30650040/)
 
+
+### 🎨 **Interactive Drawing Tool with OpenCV**
+This script provides a simple graphical interface that allows users to draw shapes (rectangle, line, circle) on an image using mouse events and keyboard input. The image can be saved with a single keystroke and opened in full screen for high-resolution editing.
+
+```bash
+python open_cv_mouse_key_events_github.py
+```
+This script will:
+- Draw shapes interactively using your mouse
+- Choose between rectangle, line, or circle
+- Open image in full screen mode for better drawing experience
+- Save the edited image to a folder with a single key press
+- Mouse Controls
+  - Click & Drag the left mouse button to draw the selected shape
+- Keyboard Controls
+   - Key	Action
+     - 1	Draw Rectangle
+     - 2	Draw Line
+     - 3	Draw Circle
+     - s	Save Image
+     - ESC	Exit Program
+- Full Screen Support
+   - The window launches in fullscreen mode, allowing better handling of high-resolution images without resizing or distortion.
+
 ## Example Outputs
 - Resized image (resized.jpg)
 - Cropped image (cropped.jpg)
