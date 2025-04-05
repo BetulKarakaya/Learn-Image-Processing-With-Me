@@ -49,11 +49,27 @@ To manipulate brightness, contrast, color levels, and sharpness, run:
 ```bash
 python pillow_enhanced_images_github.py
 ```
+```bash
+python open_cv_trackbar_enhancement_github.py
+```
 
 The script will:
+- Pillow Version:
+   - Show the original image.
+   - It manipulates the brightness, contrast, color levels, and sharpness of an image and save the results as new files in the **enhanced_images** folder.
+- OpenCV version:
+  - Display an image in fullscreen mode with interactive controls
+  - Provide real-time adjustment of:
+     - Contrast (via trackbar, scaled between 0.0 and 2.0)
+     - Brightness (via trackbar, scaled between 0 and 100)
+     - Gaussian Blur (adjustable blur intensity with odd kernel sizes)
+  - Apply all effects live while you adjust the sliders
+  - Save the enhanced image by pressing the s key
+  - Exit the tool anytime by pressing the ESC key
+  - Automatically create an output folder if it doesn't exist
+  - Maintain original image untouched; all edits are based on a copy
 
-- Show the original image.
-- It manipulates the brightness, contrast, color levels, and sharpness of an image and save the results as new files in the **enhanced_images** folder.
+
 
 ### **Drawing Shapes on an Image**
 To create an image with a background color and draw shapes (lines, rectangles, circles, polygons), run:
