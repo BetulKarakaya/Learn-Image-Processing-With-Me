@@ -17,6 +17,7 @@ This project demonstrates basic and advanced image processing techniques using t
 - **Rolling Image**: Resize an image and create a repeated pattern to fill a new canvas.
 - **Fix Low Image Resolution**: Enhances the resolution and quality of low-resolution images using the Pillow library.
 - **Batch Image Processing**: Process multiple images at once with resizing, cropping, rotating, and contrast enhancement.
+- **Edge Detection**: Detects the edges of the image using OpenCv.
 
 
 ## Setup
@@ -170,6 +171,20 @@ This script will:
      - ESC	Exit Program
 - Full Screen Support
    - The window launches in fullscreen mode, allowing better handling of high-resolution images without resizing or distortion.
+ 
+### **Edge Detection With OpenCV**
+This tool is useful for interactively viewing edge detection results in a clean fullscreen interface. This script use [low_resolution_sample.jpg](https://unsplash.com/photos/gray-concrete-road-between-green-trees-during-daytime-D9SJWE89GyU)
+
+```bash
+python open_cv_edge_detection_github.py
+```
+This script will:
+- Load an image from a given file path.
+- Resize and pad the image to fit fullscreen without distortion.
+- Apply Canny edge detection to highlight edges in the image.
+- Display the original and edge-detected images side by side.
+- Allow the user to save the edge-detected image by pressing the 's' key.
+- Exit the program with the 'ESC' key.
 
 ## Example Outputs
 - Resized image (resized.jpg)
@@ -190,7 +205,6 @@ This script will:
 This project will be expanded to include more advanced image processing techniques, such as:
 
 - Object detection
-- Edge detection
 - Image transformation (perspective correction, skewing)
 
 ## Contributing
