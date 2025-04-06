@@ -12,6 +12,23 @@ class Trackbar:
             raise FileNotFoundError("⚠️ Image not found. Check the path.")
         self.output_folder = output_folder
         os.makedirs(self.output_folder, exist_ok=True)
+        self.screen_width = 1920 
+        self.screen_height = 1080
+    
+    def resize_with_aspect_ratio(self, image, max_width, max_height):
+        h, w = image.shape[:2]
+        scale = min(max_width / w, max_height / h)
+        new_size = (int(w * scale), int(h * scale))
+        return cv2.resize(image, new_size, interpolation=cv2.INTER_AREA)
+
+    def pad_to_center(self, image, target_size):
+        target_w, target_h = target_size
+        h, w = image.shape[:2]
+        top = (target_h - h) // 2
+        bottom = target_h - h - top
+        left = (target_w - w) // 2
+        right = target_w - w - left
+        return cv2.copyMakeBorder(image, top, bottom, left, right, cv2.BORDER_CONSTANT, value=(0, 0, 0))
 
     def show(self):
         cv2.namedWindow("image", cv2.WINDOW_NORMAL)
@@ -38,7 +55,11 @@ class Trackbar:
             if blur > 1:
                 edited_image = cv2.GaussianBlur(edited_image, (blur, blur), 0)
 
-            cv2.imshow('image', edited_image)
+           # Resize and pad to fullscreen without stretching
+            resized = self.resize_with_aspect_ratio(edited_image, self.screen_width, self.screen_height)
+            padded = self.pad_to_center(resized, (self.screen_width, self.screen_height))
+            cv2.imshow('image', padded)
+
 
             key = cv2.waitKey(1) & 0xFF
             if key == 27:  # ESC
