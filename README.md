@@ -1,6 +1,38 @@
 # Image Processing with Pillow
 
-This project demonstrates basic and advanced image processing techniques using the Python **Pillow** library. It includes various operations such as resizing, cropping, rotating, flipping, applying filters, converting to grayscale, adding text, accessing pixel data, and enhancing images using the **ImageEnhance** module. The project is designed to explore and apply essential image manipulation tasks that can be expanded further as new features are added.
+This project demonstrates basic and advanced image processing techniques using the Python **Pillow** and **OpenCV** libraries. It includes various operations such as resizing, cropping, rotating, flipping, applying filters, converting to grayscale, adding text, accessing pixel data, drawing shapes, and enhancing images. It also includes a **Super Resolution** module to upscale low-resolution images using deep learning models.
+
+## 📂 Project Structure
+
+```bash
+├── edited_images/              # Stores images edited with Pillow
+├── enhanced_images/            # Stores brightness/contrast/sharpness edits
+├── rolled_image/               # Stores repeated pattern images
+├── higger_resolution/          # Stores Pillow-enhanced resolution images
+├── color_changed_image/        # Output for replaced color images
+├── output_images/              # Batch processed images
+├── input_images/               # Sample input images from Pexels
+├── SuperResolution/
+│   ├── models/                 # Pre-trained .pb models (LapSRN, ESPCN, etc.)
+│   ├── low_resolution/         # Example low-res image(s)
+│   ├── super_resolve.py        # Script for enhancing low-res images
+│   └── README.md               # Details about models and license
+├── pillow_basics_github.py     # Pillow basic manipulations
+├── pillow_enhanced_images_github.py
+├── open_cv_trackbar_enhancement_github.py
+├── pillow_drawings_github.py
+├── pillow_image_rolling_github.py
+├── pillow_fix_resolution_github.py
+├── pillow_color_change_github.py
+├── pillow_batch_image_github.py
+├── open_cv_mouse_key_events_github.py
+├── open_cv_shapes_text_github.py
+├── open_cv_edge_detection_github.py
+└── README.md                
+```
+
+---
+
 ## Features
 
 - **Resize Image**: Change the dimensions of an image.
@@ -18,15 +50,28 @@ This project demonstrates basic and advanced image processing techniques using t
 - **Fix Low Image Resolution**: Enhances the resolution and quality of low-resolution images using the Pillow library.
 - **Batch Image Processing**: Process multiple images at once with resizing, cropping, rotating, and contrast enhancement.
 - **Edge Detection**: Detects the edges of the image using OpenCv.
+- **Super Resolution (Deep Learning Upscaling)**: AI-assisted image enhancement with OpenCV.
 
 
 ## Setup
 
-1. **Install Pillow**: You need to install the Pillow library to work with image files.
+1. **Install Pillow**:
+   You need to install the Pillow library to work with image files.
+   💻 Installation (Recommended):
+   ```bash
+   pip install pillow
+   ```
+3. **Install OpenCV:**
+You need to install the OpenCV (cv2) library with contrib modules to access advanced functionalities like super resolution (DNN module), trackbars, interactive drawing, and edge detection.
 
-2. **Image Files**: Ensure that you have an image (e.g., [sample.jpg](https://www.pexels.com/tr-tr/fotograf/dinamik-isik-efektleriyle-soyut-portre-31208192/) ) for testing. You can use any image or download one from free image sources like Pexels or Unsplash.
+💻 Installation (Recommended):
+```bash
+pip install opencv-contrib-python
+```
 
-3. **Directory Structure**: The program creates an `edited_images` folder to save all processed images. Ensure the script has permission to create files and folders.
+3. **Image Files**: Ensure that you have an image (e.g., [sample.jpg](https://www.pexels.com/tr-tr/fotograf/dinamik-isik-efektleriyle-soyut-portre-31208192/) ) for testing. You can use any image or download one from free image sources like Pexels or Unsplash.
+
+4. **Directory Structure**: The program creates an `edited_images` folder to save all processed images. Ensure the script has permission to create files and folders.
 
 ## Usage
 
@@ -35,7 +80,7 @@ This project demonstrates basic and advanced image processing techniques using t
 2. Place your image file (e.g., [sample.jpg](https://www.pexels.com/tr-tr/fotograf/dinamik-isik-efektleriyle-soyut-portre-31208192/) ) in the project directory.
 3. Run the scripts.
    
-### **Basic Image Processing**
+### 📸 **Basic Image Processing**
 ```bash
 python pillow_basics_github.py
 ```
@@ -45,7 +90,7 @@ The script will:
 - Show the original image.
 - Perform various transformations on the image and save the results as new files in the **edited_images** folder.
 
-### **Image Enhancement**
+### ✨ **Image Enhancement**
 To manipulate brightness, contrast, color levels, and sharpness, run:
 ```bash
 python pillow_enhanced_images_github.py
@@ -70,9 +115,37 @@ The script will:
   - Automatically create an output folder if it doesn't exist
   - Maintain original image untouched; all edits are based on a copy
 
+### 🧠 Super Resolution Module with OpenCV
+
+The `SuperResolution/` folder contains:
+
+- ✅ Low-resolution example image(s)
+- ✅ Code to upscale using `cv2.dnn_superres`
+- ✅ Pre-trained models (LapSRN, ESPCN, FSRCNN)
+- ❌ EDSR models not included due to GitHub file size limits
+
+You can run:
+
+```bash
+python SuperResolution/super_resolve.py
+```
+The script will:
+- Load the selected super-resolution model (e.g., ESPCN, LapSRN, or EDSR) in .pb format.
+- Read a low-resolution input image from the low_resolution_images folder.
+- Automatically detect model scaling factor (e.g., ×2, ×4).
+- Upscale the input image using the specified deep learning model.
+- Display the original and enhanced images side by side for visual comparison.
+- Allow the user to save the enhanced image in the super_resolution_outputs folder by pressing the s key.
+- Exit the image display window with the ESC key.
+
+#### Model Source & License
+
+Model files originate from the [OpenCV dnn_superres](https://github.com/opencv/opencv_contrib) module.  
+They are shared under the **Apache 2.0 License**.  
+More details are in `SuperResolution/models/README.md`.
 
 
-### **Drawing Shapes on an Image**
+### 🟣🟪 **Drawing Shapes on an Image**
 To create an image with a background color and draw shapes (lines, rectangles, circles, polygons), run:
 
 ```bash
@@ -90,7 +163,7 @@ This script will:
 - Draw various shapes on the image.
 - Save the image in the **edited_images** folder.
 
-### **Rolling Image**
+### 🎞️ **Rolling Image**
 To create an image where a resized version of the original is repeated across the canvas, run:
 
 ```bash
@@ -102,7 +175,7 @@ This script will:
 - Repeatedly paste this resized image to fill the entire original canvas.
 - Save the output in the **rolled_image** folder.
 
-### **High-Resolution Image Enhancement**
+### 🖼️ **High-Resolution Image Enhancement**
 This script enhances the resolution and quality of low-resolution images using the Pillow library. It applies sharpening, contrast enhancement, and color adjustment to improve image clarity. The enhanced images can be saved with high quality or increased DPI (dots per inch) for better print resolution.
 
 ```bash
@@ -115,7 +188,7 @@ This script will:
 - Save the image with high DPI (300 DPI) for printing purposes
 - Save the output in the **higger_resolution** folder.
 
-###  **Color Change Tool**
+### 🎨 **Color Change Tool**
 This script allows you to **replace specific colors in an image** based on an RGB range. It uses **Pillow** and **NumPy** to detect pixels within a given color range and replace them with a new color. 
 
 ```bash
@@ -129,7 +202,7 @@ This script will:
 - Apply the Color Change – Replaces pixels in the defined range with a **new RGBA color**.
 - Save the Processed Image – Stores the modified image in the `color_changed_image` folder.
 
-### **Batch Image Processing**
+### ✂️ **Batch Image Processing**
 To apply transformations (resize, rotate, crop, adjust contrast) to multiple images in a folder, run:
 
 ```bash
@@ -172,7 +245,7 @@ This script will:
 - Full Screen Support
    - The window launches in fullscreen mode, allowing better handling of high-resolution images without resizing or distortion.
  
-### **Edge Detection With OpenCV**
+### 📏 **Edge Detection With OpenCV**
 This tool is useful for interactively viewing edge detection results in a clean fullscreen interface. This script use [low_resolution_sample.jpg](https://unsplash.com/photos/gray-concrete-road-between-green-trees-during-daytime-D9SJWE89GyU)
 
 ```bash
