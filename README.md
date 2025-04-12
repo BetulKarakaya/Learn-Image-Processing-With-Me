@@ -259,6 +259,26 @@ This script will:
 - Allow the user to save the edge-detected image by pressing the 's' key.
 - Exit the program with the 'ESC' key.
 
+
+#### 📸 **Low Light Image Enhancement With CLAHE**
+This tool is designed to enhance images with low light conditions using the CLAHE (Contrast Limited Adaptive Histogram Equalization) method. This script can be used for both grayscale and colorful images, improving visibility in poorly lit areas.
+
+[Test Images](https://www.kaggle.com/datasets/yasserh/sample-lowlight-images)
+
+```bash
+python open_cv_CLAHE_hist_equalization_github.py
+```
+
+This script will:
+
+- Load an image from a given file path.
+- Check if the image is grayscale or colorful.
+- Apply CLAHE enhancement to the image based on its type (grayscale or colorful).
+- Optionally upscale the image by a given scale factor.
+- Display the enhanced image in fullscreen.
+- Allow the user to save the enhanced image by pressing the 's' key.
+- Exit the program with the 'ESC' key.
+
 ## Example Outputs
 - Resized image (resized.jpg)
 - Cropped image (cropped.jpg)
