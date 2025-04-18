@@ -279,6 +279,20 @@ This script will:
 - Allow the user to save the enhanced image by pressing the 's' key.
 - Exit the program with the 'ESC' key.
 
+#### 🎨 **Color Palette Analyzer**
+Extracts dominant colors from an image and visualizes them as a sleek palette. Uses KMeans clustering to detect and display the most representative colors of the image.
+
+```bash
+python open_cv_color_palette_github.py
+```
+
+This script will:
+- Load an image from a given path
+- Reshape the image pixels and apply KMeans clustering to detect dominant colors
+- Display a horizontal palette bar that visualizes the dominant colors
+- Return the dominant colors in hexadecimal format for design or web use
+- Allow easy customization (image path & number of colors) 
+
 ## Example Outputs
 - Resized image (resized.jpg)
 - Cropped image (cropped.jpg)
