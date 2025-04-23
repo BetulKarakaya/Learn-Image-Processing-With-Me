@@ -291,7 +291,23 @@ This script will:
 - Reshape the image pixels and apply KMeans clustering to detect dominant colors
 - Display a horizontal palette bar that visualizes the dominant colors
 - Return the dominant colors in hexadecimal format for design or web use
-- Allow easy customization (image path & number of colors) 
+- Allow easy customization (image path & number of colors)
+
+#### 🟡 Corner Detection Tool
+Detects and visualizes prominent corners in an image using OpenCV’s goodFeaturesToTrack() algorithm. Ideal for feature point extraction in computer vision applications like tracking, object recognition, or image registration.
+
+```bash
+python open_cv_corner_detection.py
+```
+This script will:
+
+- Load an image from a given file path
+- Convert the image to grayscale and detect up to 300 strong corners
+- Display the image with detected corners marked in green
+- Resize and pad the display to fit nicely in a 1280x720 window
+- Let you save the original image with red-marked corners by pressing s
+- Exit the window with the ESC key
+
 
 ## Example Outputs
 - Resized image (resized.jpg)
