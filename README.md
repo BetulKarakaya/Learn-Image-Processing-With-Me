@@ -48,6 +48,7 @@ This project demonstrates basic and advanced image processing techniques using t
 - **Draw Shapes**: Create a blank image with a background color and draw basic shapes such as lines, rectangles, circles, and polygons.
 - **Rolling Image**: Resize an image and create a repeated pattern to fill a new canvas.
 - **Fix Low Image Resolution**: Enhances the resolution and quality of low-resolution images using the Pillow library.
+- **Noise Reduction**: Removes the noice from an image using the ImageFilter.MedianFilter()
 - **Batch Image Processing**: Process multiple images at once with resizing, cropping, rotating, and contrast enhancement.
 - **Edge Detection**: Detects the edges of the image using OpenCv.
 - **Super Resolution (Deep Learning Upscaling)**: AI-assisted image enhancement with OpenCV.
@@ -307,6 +308,22 @@ This script will:
 - Resize and pad the display to fit nicely in a 1280x720 window
 - Let you save the original image with red-marked corners by pressing s
 - Exit the window with the ESC key
+
+#### 🧼 Noise Reduction with Median Filtering
+This tool is designed to reduce noise from images using the Median Filter technique, which is particularly effective in removing salt-and-pepper noise. The script uses the Pillow (PIL) library and supports easy saving and previewing of the filtered output.
+
+```bash
+python pillow_noise_reduction_github.py
+```
+
+This script will:
+- Load an image from a given file path.
+- Apply Median Filter with customizable kernel size.
+- Save the enhanced image in high-quality (300 DPI).
+- Preview the denoised image using your default image viewer.
+- Automatically creates a folder for saving results.
+
+
 
 
 ## Example Outputs
