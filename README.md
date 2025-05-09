@@ -7,6 +7,8 @@ This project demonstrates basic and advanced image processing techniques using t
 ```bash
 ├── edited_images/              # Stores images edited with Pillow
 ├── enhanced_images/            # Stores brightness/contrast/sharpness edits
+├── gif_images/                 # Store images of gif
+│   ├── output/                 #Output of gif maker's gif
 ├── rolled_image/               # Stores repeated pattern images
 ├── higger_resolution/          # Stores Pillow-enhanced resolution images
 ├── color_changed_image/        # Output for replaced color images
@@ -323,7 +325,18 @@ This script will:
 - Preview the denoised image using your default image viewer.
 - Automatically creates a folder for saving results.
 
+#### 🕹️ Character Jump Animation GIF Generator
+This tool allows you to create a perfectly aligned GIF animation from .png or other image files.
 
+```bash
+python pillow_gif_maker_github.py
+```
+
+This script will:
+- Automatically sets the canvas size based on the first image
+- Centers all frames on the same canvas to prevent misalignment
+- Supports .png, .jpg, .jpeg, .bmp files
+- Saves the final GIF into a dedicated outputs folder inside the image folder
 
 
 ## Example Outputs
