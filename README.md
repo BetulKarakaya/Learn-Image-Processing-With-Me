@@ -24,6 +24,7 @@ This project demonstrates basic and advanced image processing techniques using t
 ├── open_cv_trackbar_enhancement_github.py
 ├── pillow_drawings_github.py
 ├── pillow_image_rolling_github.py
+├── pillow_invert_images_github.py
 ├── pillow_fix_resolution_github.py
 ├── pillow_color_change_github.py
 ├── pillow_batch_image_github.py
@@ -54,6 +55,7 @@ This project demonstrates basic and advanced image processing techniques using t
 - **Batch Image Processing**: Process multiple images at once with resizing, cropping, rotating, and contrast enhancement.
 - **Edge Detection**: Detects the edges of the image using OpenCv.
 - **Super Resolution (Deep Learning Upscaling)**: AI-assisted image enhancement with OpenCV.
+- **Image Color Inversion:** Apply color inversion to the images.
 
 
 ## Setup
@@ -337,6 +339,21 @@ This script will:
 - Centers all frames on the same canvas to prevent misalignment
 - Supports .png, .jpg, .jpeg, .bmp files
 - Saves the final GIF into a dedicated outputs folder inside the image folder
+
+#### 🎨 Side-by-Side Image Viewer with Inversion
+This tool lets you generate an inverted version of an image and display it side by side with the original, properly scaled and padded with a black background.
+
+```bash
+python pillow_invert_images_github.py
+```
+
+This script will:
+
+- Create an inverted copy of the original image
+- Automatically resize both images proportionally
+- Add black padding to keep aspect ratio intact
+- Place the two images side by side on one canvas
+- Save the final result into a dedicated processed_images folde
 
 
 ## Example Outputs
