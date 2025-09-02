@@ -353,7 +353,21 @@ This script will:
 - Automatically resize both images proportionally
 - Add black padding to keep aspect ratio intact
 - Place the two images side by side on one canvas
-- Save the final result into a dedicated processed_images folde
+- Save the final result into a dedicated processed_images folder
+
+#### 🖼️ Image Metadata Extractor
+
+This tool extracts and displays essential metadata from an image file, including size, format, mode, and animation details for GIFs.
+
+```bash
+python pillow_image_metadata_github.py
+```
+
+This script will:
+- 📂 Show the filename and file path
+- 📏 Display image size, width, and height
+- 🖼️ Reveal the image format (e.g., PNG, JPG, GIF) and color mode (e.g., RGB, RGBA)
+- 🎞️ Detect if the image is animated and count the number of frames (for GIFs)
 
 
 ## Example Outputs
