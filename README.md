@@ -370,6 +370,41 @@ This script will:
 - 🎞️ Detect if the image is animated and count the number of frames (for GIFs)
 
 
+#### 🖼️ Extracting Advanced Image Metadata
+
+This tool extracts and displays detailed EXIF metadata from image files, including camera information, timestamps, and GPS data when available.
+
+```bash
+python pillow_metadata_advanced_github.py
+```
+
+
+This script will:
+
+- 📂 Show the filename and file path
+- 📏 Display image size, width, and height
+- 🖼️ Reveal the image format (e.g., JPG, TIFF) and color mode (e.g., RGB, RGBA)
+- 🔎 Extract and print available EXIF metadata fields
+- ❌ Indicate when EXIF data is not found (e.g., for PNG, GIF, screenshots, or internet images)
+
+📸 Common EXIF Fields Explained
+
+- DateTime → The exact date and time the photo was taken.
+- Make / Model → The manufacturer and model of the camera or phone (e.g., Canon EOS, iPhone).
+- GPSInfo → Geolocation data, including latitude, longitude, and sometimes altitude.
+- ExposureTime → How long the camera’s shutter was open (affects brightness and motion blur).
+- FNumber → The aperture setting (controls depth of field).
+- ISOSpeedRatings → The ISO sensitivity used when capturing the photo.
+
+⚠️ Note:
+
+EXIF is usually present in JPEG/JPG and some TIFF files.
+
+It is often missing in PNG, GIF, screenshots, and images downloaded from social media platforms.
+
+Some editing tools strip EXIF data during compression.
+
+
 ## Example Outputs
 - Resized image (resized.jpg)
 - Cropped image (cropped.jpg)
