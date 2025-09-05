@@ -404,6 +404,35 @@ It is often missing in PNG, GIF, screenshots, and images downloaded from social 
 
 Some editing tools strip EXIF data during compression.
 
+#### 🖼️ Pillow Image Format Converter
+
+This tool demonstrates how to open an image and convert it into different formats supported by Pillow, while also explaining fully supported, read-only, and write-only formats.
+
+```bash
+python pillow_formats_github.py
+```
+
+This script will:
+
+- 📂 Open and display an image using Pillow
+- 🔄 Convert the source image to another format (e.g., BMP → GIF)
+- 💾 Save the converted image into a dedicated folder
+- 📑 Print a summary of supported formats in Pillow
+
+📌 Pillow Supported Formats
+
+Fully Supported (Read + Write): JPEG, PNG, BMP, GIF, TIFF, WebP, ICO ...
+
+Read-Only Formats: CUR, PSD, QOI, FLI, MPO ... (can open but not save)
+
+Write-Only Formats: PDF, PALM, XV Thumbnails ... (can save but not open)
+
+⚠️ Note:
+
+Trying to save to a read-only format (e.g., PSD) will fail.
+
+Trying to open a write-only format (e.g., PDF) will fail.
+
 
 ## Example Outputs
 - Resized image (resized.jpg)
