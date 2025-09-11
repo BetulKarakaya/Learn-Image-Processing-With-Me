@@ -434,6 +434,21 @@ Trying to save to a read-only format (e.g., PSD) will fail.
 Trying to open a write-only format (e.g., PDF) will fail.
 
 
+
+#### 🖼️ Morphology Operations (Erosion & Dilation)
+
+To apply **Erosion** and **Dilation** on an image and see a full-screen side-by-side comparison, run:
+
+```bash
+python open_cv_morphology_ops_github.py
+```
+This script will:
+
+- Load the image and convert it to grayscale.
+- Apply Erosion and Dilation with customizable kernel size and iterations.
+- Display Original, Eroded, and Dilated images side by side in full screen.
+- Save the processed images in the morphology_results folder.
+
 ## Example Outputs
 - Resized image (resized.jpg)
 - Cropped image (cropped.jpg)
