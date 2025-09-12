@@ -449,6 +449,22 @@ This script will:
 - Display Original, Eroded, and Dilated images side by side in full screen.
 - Save the processed images in the morphology_results folder.
 
+#### 🖼️ Filter Color with OpenCV
+To apply a color filter (default: Blue) on an image and see a full-screen side-by-side comparison, run:
+
+```bash
+python open_cv_filter_color_github.py
+```
+
+This script will:
+
+- Load the input image.
+- Convert it from BGR to HSV color space.
+- Apply a mask for the selected color range (default: Blue).
+- Generate the filtered result showing only the chosen color.
+- Display Original, Mask, and Filtered Result images side by side in full screen.
+- Save all processed images in the color_filter_results folder.
+
 ## Example Outputs
 - Resized image (resized.jpg)
 - Cropped image (cropped.jpg)
