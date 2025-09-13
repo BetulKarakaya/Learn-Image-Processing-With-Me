@@ -465,6 +465,21 @@ This script will:
 - Display Original, Mask, and Filtered Result images side by side in full screen.
 - Save all processed images in the color_filter_results folder.
 
+#### 🖼️ Image Denoising with OpenCV
+To remove noise from a color image using Non-Local Means Denoising and see a full-screen side-by-side comparison, run:
+
+```bash
+python open_cv_denoising_github.py
+```
+
+
+This script will:
+
+- Load the input image (bear.png).
+- Apply fast Non-Local Means Denoising to reduce noise while preserving edges.
+- Display Original and Denoised images side by side in full screen.
+- Save the denoised image in the denoise_results folder.
+
 ## Example Outputs
 - Resized image (resized.jpg)
 - Cropped image (cropped.jpg)
