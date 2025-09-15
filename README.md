@@ -11,7 +11,10 @@ This project demonstrates basic and advanced image processing techniques using t
 │   ├── output/                 #Output of gif maker's gif
 ├── rolled_image/               # Stores repeated pattern images
 ├── higger_resolution/          # Stores Pillow-enhanced resolution images
+├── color_filter_results
+├── circle_detection_results
 ├── color_changed_image/        # Output for replaced color images
+├── denoise_results
 ├── output_images/              # Batch processed images
 ├── input_images/               # Sample input images from Pexels
 ├── SuperResolution/
@@ -31,6 +34,7 @@ This project demonstrates basic and advanced image processing techniques using t
 ├── open_cv_mouse_key_events_github.py
 ├── open_cv_shapes_text_github.py
 ├── open_cv_edge_detection_github.py
+├── morphology_results
 └── README.md                
 ```
 
@@ -479,6 +483,24 @@ This script will:
 - Apply fast Non-Local Means Denoising to reduce noise while preserving edges.
 - Display Original and Denoised images side by side in full screen.
 - Save the denoised image in the denoise_results folder.
+
+
+#### 🟢 Circle Detection with OpenCV
+
+To detect circles in an image using the Hough Circle Transform and view the result in full-screen mode, run:
+
+```bash
+python open_cv_circle_detection_github.py
+```
+
+This script will:
+
+- Load the input image (circle.jpg).
+- Convert it to grayscale and apply a blur to reduce noise.
+- Detect circles using the Hough Circle Transform.
+- Draw the first detected circle with its center point.
+- Display the detected result in full screen.
+- Save the processed image in the circle_detection_results folder.
 
 ## Example Outputs
 - Resized image (resized.jpg)
