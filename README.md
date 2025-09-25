@@ -502,6 +502,24 @@ This script will:
 - Display the detected result in full screen.
 - Save the processed image in the circle_detection_results folder.
 
+#### ☺️​ Face Detection with OpenCV
+
+To detect faces and eyes in an image using Haar Cascade classifiers and view the result in full-screen mode, run:
+
+```bash
+python open_cv_face_detection_github.py
+```
+
+This script will:
+
+- Load the input image (faces2.jpg).
+- Convert it to grayscale and enhance contrast with histogram equalization.
+- Detect faces using the Haar cascade classifier.
+- Detect eyes within each detected face region.
+- Draw rectangles around detected faces (yellow) and eyes (orange).
+- Display the detected result in full-screen mode.
+- Save the processed image in the face_detection_results folder.
+
 ## Example Outputs
 - Resized image (resized.jpg)
 - Cropped image (cropped.jpg)
