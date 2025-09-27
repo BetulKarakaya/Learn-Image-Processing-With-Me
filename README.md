@@ -502,13 +502,15 @@ This script will:
 - Display the detected result in full screen.
 - Save the processed image in the circle_detection_results folder.
 
-#### ☺️​ Face Detection with OpenCV
+#### ☺️ Face Detection with OpenCV (Haar Cascade + DNN)
+##### 🟡 Haar Cascade Face Detection
 
 To detect faces and eyes in an image using Haar Cascade classifiers and view the result in full-screen mode, run:
 
 ```bash
 python open_cv_face_detection_github.py
 ```
+
 
 This script will:
 
@@ -519,6 +521,47 @@ This script will:
 - Draw rectangles around detected faces (yellow) and eyes (orange).
 - Display the detected result in full-screen mode.
 - Save the processed image in the face_detection_results folder.
+
+##### 🔵 DNN Face Detection (SSD + ResNet10)
+
+For more robust face detection using a Deep Neural Network (DNN) model, run:
+
+```bash
+python open_cv_DNNFaceDetector_github.py
+```
+
+
+This script will:
+
+- Load the input image (faces2.jpg).
+- Use the pretrained SSD (Single Shot Multibox Detector) with ResNet10 backbone.
+- Detect faces with confidence scores.
+- Draw bounding boxes and confidence percentages on detected faces.
+- Save the processed image in the face_detection_results folder.
+
+##### ⚠️ Model Files Required
+
+The DNN detector requires two model files that are not included in this repository.
+Please download them manually and place them inside a folder named DNN/:
+
+Caffe model (weights)
+Download from Kaggle
+ → [res10_300x300_ssd_iter_140000.caffemodel](https://www.kaggle.com/datasets/sakshikumari956/res10-300x300-ssd-iter-140000)
+
+Prototxt (network architecture)
+Download from OpenCV repository
+ → [deploy.prototxt.txt](https://github.com/opencv/opencv/blob/master/samples/dnn/face_detector/deploy.prototxt)
+
+📂 Your folder structure should look like this:
+```bash
+project/
+│── open_cv_face_detection_github.py
+│── open_cv_dnn_face_detection.py
+│── faces2.jpg
+│── DNN/
+    │── deploy.prototxt.txt
+    │── res10_300x300_ssd_iter_140000.caffemodel
+```
 
 ## Example Outputs
 - Resized image (resized.jpg)
@@ -535,11 +578,6 @@ This script will:
 - Image with drawn shapes (drawing.jpg)
 - Batch processed images (saved in output_images/edited_*.jpg)
 
-## Future Work
-This project will be expanded to include more advanced image processing techniques, such as:
-
-- Object detection
-- Image transformation (perspective correction, skewing)
 
 ## Contributing
 Feel free to contribute to the project by opening issues or submitting pull requests with new features or improvements. Any contributions are welcome!
