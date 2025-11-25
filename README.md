@@ -563,6 +563,29 @@ project/
     │── res10_300x300_ssd_iter_140000.caffemodel
 ```
 
+
+### 🎨 Image Analyzer
+
+A small, reliable utility that reads an image file and prints a compact report: file size, file type, color mode, resolution, total pixels, aspect ratio, and the image's dominant color (HEX + RGB + percentage). Runs locally with Pillow and uses cached properties for efficient repeated access.
+
+```bash
+python image_analyzer.py
+This README assumes the main script is image_analyzer.py (or the filename you already use).
+```
+
+This script will:
+
+   - Reports:
+
+      - File name and file type (JPEG, PNG, etc.)
+      - File size (human-readable and bytes)
+      - Color mode (RGB, CMYK, RGBA, L, ...)
+      -  Resolution (width × height)
+      -  Total pixels (width × height)
+      -  Aspect ratio (width / height, rounded)
+      -   Dominant color returned as #rrggbb (HEX), (r, g, b) and approximate percentage of the image covered.
+      -   Uses @cached_property for expensive derived computations so repeated accesses are cheap.
+
 ## Example Outputs
 - Resized image (resized.jpg)
 - Cropped image (cropped.jpg)
