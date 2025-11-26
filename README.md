@@ -569,7 +569,7 @@ project/
 A small, reliable utility that reads an image file and prints a compact report: file size, file type, color mode, resolution, total pixels, aspect ratio, and the image's dominant color (HEX + RGB + percentage). Runs locally with Pillow and uses cached properties for efficient repeated access.
 
 ```bash
-python image_analyzer.py
+python cached_property_image_analyzer_advanced_github.py
 This README assumes the main script is image_analyzer.py (or the filename you already use).
 ```
 
@@ -585,6 +585,33 @@ This script will:
       -  Aspect ratio (width / height, rounded)
       -   Dominant color returned as #rrggbb (HEX), (r, g, b) and approximate percentage of the image covered.
       -   Uses @cached_property for expensive derived computations so repeated accesses are cheap.
+    
+### 🎯 YOLOv8 Auto-Resizing Detection Tool
+
+A lightweight, practical detection script using YOLOv8 that performs object detection while automatically resizing the displayed image to fit your screen—without requiring any external screen-resolution libraries.
+Ideal for high-resolution images that normally exceed your monitor size. Detection runs on the original resolution for maximum accuracy, while the display output is scaled down to fit comfortably on screen.
+
+```bash
+python yolov8_resize_trick_github.py
+```
+
+
+This script will:
+
+- Accurate YOLOv8 Detection
+   - Loads a YOLOv8 model (yolov8n.pt by default
+   - Runs object detection on the original full-resolution image
+   -Draws bounding boxes and labels
+
+- Auto-Resizes Image for Display
+   - Prevents large images from overflowing your screen
+   - Scales output to safe values (default 1600×900)
+   - No external libraries (e.g., screeninfo) required
+
+- Correct Box Mapping
+   - Bounding boxes are predicted on the original image
+   - Coordinates are scaled precisely to match the resized output
+   - Ensures perfectly aligned boxes even after shrinking the image
 
 ## Example Outputs
 - Resized image (resized.jpg)
