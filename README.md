@@ -612,7 +612,44 @@ This script will:
    - Bounding boxes are predicted on the original image
    - Coordinates are scaled precisely to match the resized output
    - Ensures perfectly aligned boxes even after shrinking the image
+ 
 
+
+### 🎯 YOLOv8 NMS Trick — Wrong vs Correct Detection Preview
+
+A practical demonstration script showing how confidence filtering and per-class Non-Maximum Suppression (NMS) dramatically improve YOLOv8 detection results.
+It presents a side-by-side comparison of WRONG (raw output with duplicates) vs CORRECT (filtered + NMS-applied) detections — all inside a screen-fitting preview window.
+
+The tool automatically resizes the output preview to fit your monitor, without requiring any screen-resolution libraries.
+
+```bash
+python filter_low_confidence_detections_github.py
+```
+
+ This Script will:
+ 
+   - 🔴 Show WRONG — No Filtering, No NMS method implementation
+
+      - Uses all raw boxes returned by YOLOv8
+      -  Artificially duplicates boxes to demonstrate typical duplicate detection issues
+      -  Shows the problems caused when:
+      -  No confidence threshold is applied
+      -  No NMS filtering is performed
+      -   Duplicate overlapping boxes appear
+      -    This helps visualize why filtering is essential.
+
+   - 🟢 show CORRECT — Confidence Threshold + Per-Class NMS implementation
+
+      - The script applies a proper, professional-grade pipeline:
+      - Confidence filter (default: 0.25)
+      - Per-class NMS (IoU threshold: 0.45)
+      -  Removes duplicates and overlapping predictions
+      -  Produces clean, accurate bounding boxes
+      -   All displayed boxes are fully aligned with the original image resolution.
+
+   - Auto-Resized, Screen-Safe Preview
+   
+ 
 ## Example Outputs
 - Resized image (resized.jpg)
 - Cropped image (cropped.jpg)
